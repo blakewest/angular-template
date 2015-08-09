@@ -1,5 +1,9 @@
-# Chartbnb
-Visualize Airbnb Data
+# Angular Template
+Get a project started right!
+
+This particular template has a server file designed to be used with a proxy. But you could just delete the server.js file and do your own thing if you want.
+
+The main help here is a good angular structure with a really sweet Gruntfile!
 
 ## Contribute
 
@@ -38,7 +42,7 @@ You will need...
     ```git clone``` {{use the git clone link at the right}}
   2. Enter project directory, see that RVM does not error
 
-    ```cd chartbnb```
+    ```cd angular_proxy_template```
   3. Install node packages locally
 
     ```npm install```
@@ -49,5 +53,5 @@ You will need...
 
     ```npm start```
     
-    - If you get `[Proxy] Error!!!` you are not running the API server, but everything else is working correctly.
+    - If you get `[Proxy] Error!!!` you are not running the API server, but everything else is working correctly. Or just don't do the proxy thing and write your own server file from scratch!
 
