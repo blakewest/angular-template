@@ -1,0 +1,39 @@
+!!!
+%html('xmlns:ng'="http://angularjs.org" id="ng-app" ng-app="chartbnb")
+  %head
+    %meta(charset='utf8')
+    %meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1")
+    %meta(name="description" content="Technology for Direct Primary Care")
+    %meta(name="keywords" content="Airbnb, Data, Charts, Real Estate, Investing")
+    %base(href='/')
+    %title Chartbnb
+    %link(rel='stylesheet' href='/vendor/css/all.css')
+    %link(rel='stylesheet' href='/css/app.css')
+    %link(rel='icon' href='/favicon.ico' type='image/x-icon')
+    /if lte IE 8
+      %script
+        document.createElement('ng-include');
+        document.createElement('ng-pluralize');
+        document.createElement('ng-view');
+        document.createElement('ng:include');
+        document.createElement('ng:pluralize');
+        document.createElement('ng:view');
+  %body(data-ng-class="{signed_in: user, signed_out: !user}")
+    %div(ui-view='')
+
+    / @ifndef DEBUG
+    %script(src='/dist/dist.min.js' type="text/javascript")
+    / @endif
+
+    / @ifdef DEBUG
+    %script(src='//localhost:35728/livereload.js')
+    %script(src='/vendor/js/all.js')
+
+    %script(src='../app/common/app.js')
+    %script(src='../app/common/initModules.js')
+    %script(src='../app/common/initModules.js')
+
+    / include: "type": "js", "files": "../app/**/*.js"
+    / /include
+
+    / @endif
